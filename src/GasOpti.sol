@@ -19,6 +19,14 @@ contract GasOpti {
     function getBalance4() public returns (uint256) {
         return balance;
     }
+
+    function require1() external view {
+        require(balance == 0, "Balance != 0");
+    }
+
+    function assert1() external view {
+        assert(balance == 0);
+    }
 }
 
 /* @script: forge inspect src/GasOpti.sol:SlotNotOpti storage --pretty */

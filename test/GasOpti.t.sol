@@ -31,4 +31,12 @@ contract TestContract is Test {
     function testGetBalance4() public {
         gasOpti.getBalance4();
     }
+
+    function testVerif1() public {
+        gasOpti.require1();
+    }
+
+    function testVerif2() public {
+        gasOpti.assert1();
+    }
 }
