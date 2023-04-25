@@ -90,9 +90,29 @@ contract EventNotOpti {
 }
 
 contract EventOpti {
-    event Store(uint256, address);
+    event Store(uint256 indexed a, address indexed b);
 
     function opti() external {
         emit Store(1, 0xaaC5322e456d45E7b6c452038836C5631C2AeBc0);
+    }
+}
+
+contract Plus {
+    uint256 a = 10;
+
+    function plus1() external {
+        a += 1;
+    }
+
+    function plus2() external {
+        a = a + 1;
+    }
+
+    function plus3() external {
+        a++;
+    }
+
+    function plus4() external {
+        ++a;
     }
 }

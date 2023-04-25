@@ -13,6 +13,7 @@ contract TestContract is Test {
     ImmutableOpti immutableOpti;
     EventNotOpti eventNotOpti;
     EventOpti eventOpti;
+    Plus plus;
 
     function setUp() public {
         gasOpti = new GasOpti();
@@ -22,6 +23,7 @@ contract TestContract is Test {
         immutableOpti = new ImmutableOpti(1, 2);
         eventNotOpti = new EventNotOpti();
         eventOpti = new EventOpti();
+        plus = new Plus();
     }
 
     function testGetBalance1() public {
@@ -62,5 +64,21 @@ contract TestContract is Test {
 
     function testAccessStorageOpti() public {
         gasOpti.accessStorageOpti();
+    }
+
+    function testPlus1() public {
+        plus.plus1();
+    }
+
+    function testPlus2() public {
+        plus.plus2();
+    }
+
+    function testPlus3() public {
+        plus.plus3();
+    }
+
+    function testPlus4() public {
+        plus.plus4();
     }
 }
