@@ -81,4 +81,12 @@ contract TestContract is Test {
     function testPlus4() public {
         plus.plus4();
     }
+
+    function testErrorNotOpti() public {
+        gasOpti.errorNotOpti();
+    }
+
+    function testErrorOpti() public {
+        gasOpti.errorOpti();
+    }
 }

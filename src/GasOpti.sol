@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 contract GasOpti {
     uint256 balance = address(this).balance;
     uint256 a = 10;
+    error t(string test);
 
     function getBalance1() external view returns (uint256) {
         return balance;
@@ -40,6 +41,14 @@ contract GasOpti {
         uint256 b = opti;
         uint256 c = opti;
         uint256 d = opti;
+    }
+
+    function errorNotOpti() external {
+        revert("test");
+    }
+
+    function errorOpti() external {
+        revert t("test");
     }
 }
 
