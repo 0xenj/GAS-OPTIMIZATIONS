@@ -3,6 +3,7 @@ pragma solidity ^0.8.13;
 
 contract GasOpti {
     uint256 balance = address(this).balance;
+    uint256 a = 10;
 
     function getBalance1() external view returns (uint256) {
         return balance;
@@ -26,6 +27,19 @@ contract GasOpti {
 
     function assert1() external view {
         assert(balance == 0);
+    }
+
+    function accessStorageNotOpti() external {
+        uint256 b = a;
+        uint256 c = a;
+        uint256 d = a;
+    }
+
+    function accessStorageOpti() external {
+        uint256 opti = a;
+        uint256 b = opti;
+        uint256 c = opti;
+        uint256 d = opti;
     }
 }
 

@@ -55,4 +55,12 @@ contract TestContract is Test {
     function testEventOpti() public {
         eventOpti.opti();
     }
+
+    function testAccessStorageNotOpti() public {
+        gasOpti.accessStorageNotOpti();
+    }
+
+    function testAccessStorageOpti() public {
+        gasOpti.accessStorageOpti();
+    }
 }
