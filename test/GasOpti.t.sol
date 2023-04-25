@@ -3,13 +3,17 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-import "src/Contract.sol";
+import "src/GasOpti.sol";
 
 contract TestContract is Test {
     GasOpti gasOpti;
+    SlotNotOpti slotNotOpti;
+    SlotOpti slotOpti;
 
     function setUp() public {
         gasOpti = new GasOpti();
+        slotNotOpti = new SlotNotOpti();
+        slotOpti = new SlotOpti();
     }
 
     function testGetBalance1() public {
