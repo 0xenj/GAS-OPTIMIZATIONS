@@ -46,3 +46,23 @@ contract SlotOpti {
     bytes8 c;
     bytes8 e;
 }
+
+contract NotImmutable {
+    uint256 public a;
+    uint16 public b;
+
+    constructor(uint256 _a, uint16 _b) public {
+        a = _a;
+        b = _b;
+    }
+}
+
+contract ImmutableOpti {
+    uint256 public immutable a;
+    uint16 public immutable b;
+
+    constructor(uint256 _a, uint16 _b) public {
+        a = _a;
+        b = _b;
+    }
+}

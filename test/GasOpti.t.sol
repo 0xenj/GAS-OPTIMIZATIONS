@@ -9,11 +9,15 @@ contract TestContract is Test {
     GasOpti gasOpti;
     SlotNotOpti slotNotOpti;
     SlotOpti slotOpti;
+    NotImmutable notImmutable;
+    ImmutableOpti immutableOpti;
 
     function setUp() public {
         gasOpti = new GasOpti();
         slotNotOpti = new SlotNotOpti();
         slotOpti = new SlotOpti();
+        notImmutable = new NotImmutable(1, 2);
+        immutableOpti = new ImmutableOpti(1, 2);
     }
 
     function testGetBalance1() public {
