@@ -11,6 +11,8 @@ contract TestContract is Test {
     SlotOpti slotOpti;
     NotImmutable notImmutable;
     ImmutableOpti immutableOpti;
+    EventNotOpti eventNotOpti;
+    EventOpti eventOpti;
 
     function setUp() public {
         gasOpti = new GasOpti();
@@ -18,6 +20,8 @@ contract TestContract is Test {
         slotOpti = new SlotOpti();
         notImmutable = new NotImmutable(1, 2);
         immutableOpti = new ImmutableOpti(1, 2);
+        eventNotOpti = new EventNotOpti();
+        eventOpti = new EventOpti();
     }
 
     function testGetBalance1() public {
@@ -42,5 +46,13 @@ contract TestContract is Test {
 
     function testVerif2() public {
         gasOpti.assert1();
+    }
+
+    function testEventNotOpti() public {
+        eventNotOpti.notOpti();
+    }
+
+    function testEventOpti() public {
+        eventOpti.opti();
     }
 }

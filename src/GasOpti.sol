@@ -66,3 +66,19 @@ contract ImmutableOpti {
         b = _b;
     }
 }
+
+contract EventNotOpti {
+    address store;
+
+    function notOpti() external {
+        store = 0xaaC5322e456d45E7b6c452038836C5631C2AeBc0;
+    }
+}
+
+contract EventOpti {
+    event Store(uint256, address);
+
+    function opti() external {
+        emit Store(1, 0xaaC5322e456d45E7b6c452038836C5631C2AeBc0);
+    }
+}
